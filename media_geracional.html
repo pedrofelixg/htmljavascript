@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h1>MÉDIA DE GERAÇÕES DO BRASIL</h1>
+
+
+<script>
+function pulaLinha () {
+	document.write("<br>");
+}
+function mostra (frase) {
+	document.write(frase);
+	pulaLinha();
+}
+var anoInicial = 1500
+var anoAtual = 2021
+var geração = 28
+
+var numeroDeGerações = (anoAtual - anoInicial) / geração;
+
+mostra("Se o contarmos desde a chegada dos colonizadores em 1500 até hoje, com intervalos de 28 anos. ")
+mostra("O Número de Gerações é " + Math.round(numeroDeGerações) );
+
+
+</script>

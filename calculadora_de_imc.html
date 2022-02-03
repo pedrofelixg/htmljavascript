@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+
+<div class="container">
+  <h1 class="page-title">
+    CALCULADORA DE IMC
+  </h1>
+  <p class="page-subtitle">
+    Descubra seu Índice de Massa Corporal em um Clique
+  </p>
+  <label for="Peso">Insira o Peso</label><br>
+  <input tipe="number" id="valorEmPeso" size="8" /><br>
+  
+  <label for="Altura">Insira a Altura</label><br>
+  <input tipe="number" id="valorEmAltura"  size="8" /><br>
+  <button type="submit"
+          onclick="Calcular()">Calcular</button>
+  <h2 id="valorCalculado"></h2>
+</div>
+
+<details>
+  <i>O site será melhorado com o tempo</i>
+</details>
+  
+<script>
+function Calcular() {
+  var valorElemento = document.getElementById("valorEmPeso");
+  var valorElemento2 = document.getElementById("valorEmAltura");
+  var valorEmPeso = valorElemento.value;
+  var valorEmAltura = valorElemento2.value;
+  var IMC = parseFloat( valorEmPeso / (valorEmAltura * valorEmAltura) );
+  
+  var IMC = valorEmPeso / (valorEmAltura * valorEmAltura);
+  console.log(IMC);
+  
+  var imcFixado = IMC.toFixed(2)
+  
+ var elementoImcCalculado = document.getElementById("valorCalculado");
+  var valorCalculado = "O resultado do seu IMC é " + imcFixado;
+  elementoImcCalculado.innerHTML = valorCalculado;
+  
+  document.getElementById ("valorCalculado");
+
+  if (IMC < 18) {
+    alert("Você está ABAIXO do Peso Ideal");
+    }
+
+    if (IMC >= 18) {
+
+      if (IMC <= 24) {
+        alert("Você está no Peso Ideal");
+      }
+    }
+
+  if (IMC >= 24) {
+    alert("Você está ACIMA do Peso Ideal");
+  }
+}
+</script>
